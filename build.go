@@ -61,9 +61,6 @@ func BuildFiles(payload Payload, dir string, options *BuildOptions) error {
 
 // Build creates an NGINX config from a crossplane.Config.
 func Build(w io.Writer, config Config, options *BuildOptions) error {
-	if options.Indent == 0 {
-		options.Indent = 4
-	}
 
 	head := ""
 	if options.Header {
